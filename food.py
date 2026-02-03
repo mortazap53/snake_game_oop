@@ -8,3 +8,7 @@ class Food(Turtle):
         self.color("black")
         self.penup()
         self.goto(random.randint(-270, 270), random.randint(-270, 270))
+
+    def recreate_food(self):
+        self.clear()
+        self.goto(random.randint(-270, 270), random.randint(-270, 270))
