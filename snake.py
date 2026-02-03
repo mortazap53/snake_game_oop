@@ -1,21 +1,29 @@
 from turtle import Turtle
 
 positions = [(0, 0), (-20, 0), (-40, 0)]
+move_distance = 20
 
-class Snake(Turtle):
+class Snake:
     def __init__(self):
-        super().__init__()
         self.snake_body = []
-        self.shape("circle")
-        self.color("black")
         self.create_snake()
+        self.head = self.snake_body[0]
 
     def create_snake(self):
         for position in positions:
-            body_part = Turtle(shape="square")
+            body_part = Turtle(shape="circle")
             body_part.penup()
             body_part.goto(position)
             self.snake_body.append(body_part)
+
+    def move(self):
+        for num in range(len(self.snake_body) -1, 0, -1):
+            x = self.snake_body[num - 1].xcor()
+            y = self.snake_body[num - 1].ycor()
+            self.snake_body[num].goto(x, y)
+        self.head.forward(move_distance)
+
+
 
 
 
