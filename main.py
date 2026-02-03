@@ -35,6 +35,11 @@ while game_is_on:
         game_is_on = False
         score.game_over()
 
+    for parts in snake.snake_body[1:]:
+        if snake.head.distance(parts) < 15:
+            game_is_on = False
+            score.game_over()
+
 
 
 
