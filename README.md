@@ -1,5 +1,5 @@
 ### snake_game_oop
-It is the famous snake game that all of you may have heard. I build this project using the oop object-oriented programming in python in order to make it reusable and be an easy changeable project. Simple to change logic and other things you want to change. 
+It is the famous snake game that all of you may have heard. I build this project using the oop object-oriented programming in python in order to make it reusable and be an easy changeable project. Simple to change logic and other things you want to change. And one of the most important parts tha I added it recently is the ability to store the highest score of all time by using the file opening inside the project and then reading and the file writing abilities.
 
 ### more explaination:
 
@@ -17,6 +17,7 @@ It is the famous snake game that all of you may have heard. I build this project
 - Self-collision detection
 - Game over display
 - Modular and readable code structure
+- Storing the hgih score of all the times
 
 ---
 
@@ -31,18 +32,20 @@ This project demonstrates core programming and game-development concepts:
 - Coordinate-based movement
 - Collision detection using distance calculation
 - Screen refresh optimization using `tracer()`
+- File opening
 
 ---
 
 ##  Project Structure
 
 snake-game/
-│
-├── main.py # Main game loop and screen setup
-├── snake.py # Snake creation, movement, and growth logic
-├── food.py # Food behavior and random placement
-├── score.py # Score tracking and game-over display
-└── README.md # Project documentation
+:
+ ** main.py # Main game loop and screen setup
+ ** snake.py # Snake creation, movement, and growth logic
+ ** food.py # Food behavior and random placement
+ ** score.py # Score tracking and game-over display
+ ** data.txt # Data is the file which store the highest score
+ ** README.md # Project documentation
 
 ---
 
@@ -60,7 +63,7 @@ Snake Movement
 
 The snake body moves from tail to head, with each segment copying the position of the segment in front of it.
 The head moves forward after all body segments update.
-This prevents overlapping and ensures smooth movement.
+This make the snake able to move smoothly and its tail chase its head directly.
 
 ---
 
@@ -72,9 +75,11 @@ The score increases
 
 ---
 
-## Game Over Conditions
-Snake hits the wall
-Snake collides with its own body
+## Reset game Conditions
+It is the sutuation that the score become 0 and a new snake will be created
+
+** Snake hits the wall 
+** Snake collides with its own body
 
 ---
 
@@ -83,7 +88,8 @@ Clear separation of concerns (each class has a single responsibility)
 Consistent use of data types for positions
 Clean and readable method structure
 Easy to extend and maintain
-Beginner-friendly but professionally structured
+professionally structured
+Using some complex concept of python like oop and the file opening
 
 ---
  
@@ -96,3 +102,4 @@ Which they are my objective:
 * Object-Oriented Programming
 * Game logic and debugging
 * Clean code practices
+* Opening the file and reading also writing it whit python
