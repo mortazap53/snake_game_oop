@@ -90,7 +90,8 @@ Beginner-friendly but professionally structured
 ## Author
 Mortaza Panahi
 
-This project was built to strengthen understanding of my own objective are:
+This project was built to strengthen understanding of these parts:
+Which they are my objective:
 * Python fundamentals
 * Object-Oriented Programming
 * Game logic and debugging
