@@ -7,7 +7,9 @@ class Score(Turtle):
     def __init__(self):
         super().__init__()
         self.score = 0
-        self.high_score = 0
+        data = open(file= "data.txt", mode="r")
+        self.high_score = int(data.read())
+        data.close()
         self.penup()
         self.color("black")
         self.goto(0, 267)
@@ -25,8 +27,8 @@ class Score(Turtle):
     def reset_game(self):
         if self.score > self.high_score:
             self.high_score = self.score
+            set_high_score = open(file="data.txt", mode="w")
+            set_high_score.write(str(self.high_score))
+            set_high_score.close()
         self.score = 0
         self.show_score()
-
-    def save_high_score(self):
-        return self.high_score
