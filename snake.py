@@ -47,6 +47,12 @@ class Snake:
         if self.head.heading() != LEFT:
             self.head.setheading(RIGHT)
 
+    def reset_game(self):
+        for parts in self.snake_body:
+            parts.goto(2000, 2000)
+        self.snake_body.clear()
+        self.create_snake()
+        self.head = self.snake_body[0]
 
 
 
